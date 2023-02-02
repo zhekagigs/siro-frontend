@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import ProjectsPage from './projects/ProjectsPage'
+
+type info = {
+  accesibility: number,
+  activity: string,
+  key: string,
+  link: string,
+  participants: 1,
+  price: number,
+  type: string
+}
+
 
 function App() {
+  const [cards, setCards] = useState<info[]> ([])
+
+  useEffect(() => {
+    pingAPI()
+  }, [])
+
+  const pingAPI = () => {
+    fetch('http:/www.boredapi.com/api/activity')
+    .then(response => response.json())
+    .then((data:info) => {
+      setCards([...cards, ...[data]])
+    })
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+        <ProjectsPage />
+      </div>
   );
 }
 

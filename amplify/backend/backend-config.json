@@ -1,0 +1,43 @@
+{
+  "api": {
+    "PrjectsListsAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "fetchProjectById"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "fetchProjectById": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_fetchProjectById_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchProjectById"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchProjectById_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchProjectById"
+        }
+      ]
+    }
+  }
+}

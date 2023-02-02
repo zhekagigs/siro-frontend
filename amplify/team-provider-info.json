@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-siro-dev-151908-authRole",
+      "UnauthRoleArn": "arn:aws:iam::776928313458:role/amplify-siro-dev-151908-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::776928313458:role/amplify-siro-dev-151908-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-siro-dev-151908-deployment",
+      "UnauthRoleName": "amplify-siro-dev-151908-unauthRole",
+      "StackName": "amplify-siro-dev-151908",
+      "StackId": "arn:aws:cloudformation:us-east-1:776928313458:stack/amplify-siro-dev-151908/00915420-a30d-11ed-8b44-12e57d76d78f",
+      "AmplifyAppId": "dgxu1lmwtksuf"
+    },
+    "categories": {
+      "function": {
+        "fetchProjectById": {
+          "deploymentBucketName": "amplify-siro-dev-151908-deployment",
+          "s3Key": "amplify-builds/fetchProjectById-314461496b7131513575-build.zip"
+        }
+      },
+      "api": {
+        "PrjectsListsAPI": {}
+      }
+    }
+  }
+}

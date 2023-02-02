@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/projects/{id}": {
+      "name": "/projects/{id}",
+      "lambdaFunction": "fetchProjectById",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
